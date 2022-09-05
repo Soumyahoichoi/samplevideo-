@@ -18,13 +18,12 @@
           muted
         
         >
-          <track
-            label="thumbnails"
-            default
-            kind="metadata"
-            src="https://stream.mux.com/DS00Spx1CV902MCtPj5WknGlR102V5HFkDe/high.mp4"
-          />
+        <track 
+        label="thumbnails" 
+        default kind="metadata" 
+        src="https://image.mux.com/DS00Spx1CV902MCtPj5WknGlR102V5HFkDe/storyboard.vtt">
         </video>
+
        
         <div slot="centered-chrome">
             <media-seek-backward-button seek-offset="15" class="modify">
@@ -44,18 +43,13 @@
           <media-control-bar class="seek-control-bar">
             <media-time-range ></media-time-range>
             <media-time-display show-duration remaining ></media-time-display>
-          </media-control-bar>
-      <div class="container">
-        <div>
           <media-mute-button ></media-mute-button>
           <media-volume-range></media-volume-range>
-        </div>
-        <div>
           <media-playback-rate-button></media-playback-rate-button>
           <media-pip-button></media-pip-button>
           <media-preview-thumbnail slot="preview"></media-preview-thumbnail>
           <media-fullscreen-button></media-fullscreen-button>
-        </div>
+          </media-control-bar>
     </div>
       </media-controller>
       <style>
