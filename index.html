@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/media-chrome@0.7"></script>
+    
+</head>
+<body>
+    <h2>Sample video using media-chrome </h2>
+    <media-controller autohide="-1" style="width: 800px; aspect-ratio: 16/9">
+        <video
+          slot="media"
+          src="https://stream.mux.com/DS00Spx1CV902MCtPj5WknGlR102V5HFkDe/high.mp4"
+          crossorigin
+          muted
+        
+        >
+          <track
+            label="thumbnails"
+            default
+            kind="metadata"
+            src="https://stream.mux.com/DS00Spx1CV902MCtPj5WknGlR102V5HFkDe/high.mp4"
+          />
+        </video>
+       
+        <div slot="centered-chrome">
+            <media-seek-backward-button seek-offset="15" class="modify">
+            </media-seek-backward-button>
+            <media-play-button  class="modify"></media-play-button>
+            <media-seek-forward-button seek-offset="15"  class="modify">
+            </media-seek-forward-button >
+          </div>
+
+          <media-control-bar class="seek-control-bar">
+            <media-time-range ></media-time-range>
+            <media-time-display show-duration remaining ></media-time-display>
+          </media-control-bar>
+      <div class="container">
+        <div>
+          <media-mute-button ></media-mute-button>
+          <media-volume-range></media-volume-range>
+        </div>
+        <div>
+          <media-playback-rate-button></media-playback-rate-button>
+          <media-pip-button></media-pip-button>
+          <media-preview-thumbnail slot="preview"></media-preview-thumbnail>
+          <media-fullscreen-button></media-fullscreen-button>
+        </div>
+    </div>
+      </media-controller>
+      <style>
+      
+       .container{
+        display: inline-flex;
+       }
+       .modify{
+        background: none;
+       }
+      
+      </style>
+      
+</body>
+</html>
